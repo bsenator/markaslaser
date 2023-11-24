@@ -6,8 +6,11 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Referance from "./components/Referance/referance";
-import Contact from "./components/Contact/contact";
 import Trade from "./components/Trade/trade";
+import Contact from "./components/Contact/contact"
+
+
+
 
 import {
   BrowserRouter as Router,

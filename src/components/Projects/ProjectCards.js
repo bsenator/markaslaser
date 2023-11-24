@@ -14,7 +14,6 @@ function ProjectCards(props) {
         </Card.Text>
         <Button variant="primary" > İncele 
         </Button>
-
       </Card.Body>
     </Card>
   );
