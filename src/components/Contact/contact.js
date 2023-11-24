@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
+import { contactConfig } from "./content_option";
 
-
-function Contact() {
+export default function Contact() {
+  
   const [width, setWidth] = useState(1200);
 
   useEffect(() => {
@@ -12,11 +13,80 @@ function Contact() {
 
   return (
     <div>
-      <Container fluid className="resume-section">
-      <Particle />
+     <Container fluid className="resume-section">
+     <Particle />
+     
+        <Row className="mb-5 mt-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4">Bizimle İletişime Geç</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+        </Row>
+        <Row className="sec_sp">
+          <Col lg="5" className="mb-5">
+            <h3 className="color_sec py-4">İletişim Bilgileri</h3>
+            <address>
+              <strong>Email:</strong>{" "}
+              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
+                {contactConfig.YOUR_EMAIL}
+              </a>
+              <br />
+              <br />
+              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
+                <p>
+                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
+                </p>
+              ) : (
+                ""
+              )}
+            </address>
+            <p>{contactConfig.description}</p>
+          </Col>
+          <Col lg="7" className="d-flex align-items-center">
+            <form  className="contact__form w-100">
+              <Row>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Name" 
+                    type="text"
+                    required 
+                  />
+                </Col>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control rounded-0"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    type="email" 
+                    required 
+                  />
+                </Col>
+              </Row>
+              <textarea
+                className="form-control rounded-0"
+                id="message"
+                name="message"
+                placeholder="Message"
+                rows="5" 
+                required
+              ></textarea>
+              <br />
+              <Row>
+                <Col lg="12" className="form-group">
+                  <button className="btn ac_btn" type="submit"> 
+                  Send
+                  </button>
+                </Col>
+              </Row>
+            </form>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
 }
 
-export default Contact;
