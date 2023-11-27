@@ -38,7 +38,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand"/>
+          <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -52,10 +52,10 @@ function NavBar() {
           <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
+          <Nav className="mx-auto bg-black rounded padding-bottom" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Ana Sayfa 
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> Ana Sayfa
               </Nav.Link>
             </Nav.Item>
 

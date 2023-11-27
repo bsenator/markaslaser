@@ -160,6 +160,9 @@ button:focus {
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
+  .fork-btn {
+    padding-bottom: 10px !important;
+  }
 }
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
@@ -182,6 +185,9 @@ button:focus {
 @media (max-width: 767px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
+  }
+  .logo {
+    height: 40px !important;
   }
 }
 
