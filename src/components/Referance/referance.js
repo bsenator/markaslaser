@@ -5,14 +5,9 @@ import Techstack from "./Techstack";
 
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
 
   return (
-    <div>
+    <div className="referencesAllContainer">
       <Container fluid className="resume-section">
         <Particle />
         <h1 className="project-heading">
